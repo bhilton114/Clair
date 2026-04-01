@@ -1,0 +1,11 @@
+- description: "Client order #471 requires urgent processing but system reports minor warnings."
+  domains: ["operations", "system"]
+  concepts: ["client_order", "system_alert"]
+
+- description: "New automated task request could conflict with ongoing high-priority task."
+  domains: ["operations"]
+  concepts: ["task_conflict"]
+
+- description: "Detected potential safety hazard in production line."
+  domains: ["safety"]
+  concepts: ["hazard", "alert"]

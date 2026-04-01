@@ -1,0 +1,11 @@
+- text: "Always verify client orders before execution to avoid mistakes."
+  source: "operations_manual"
+  context: "operations"
+
+- text: "If system errors exceed threshold, pause automated tasks and alert administrator."
+  source: "system_protocol"
+  context: "system"
+
+- text: "Avoid high-risk actions without approval."
+  source: "safety_guidelines"
+  context: "safety"
