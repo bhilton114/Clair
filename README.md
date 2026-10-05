@@ -1,167 +1,87 @@
 # Clair
 
-**A local-first cognitive AI architecture for governed reasoning, verification, memory, and tool use.**
+**A local-first cognitive AI research project focused on governed reasoning, verification, memory, and bounded tool use.**
 
-Clair is not designed as an LLM wrapper. Its core architecture keeps identity, memory, verification, calibration, planning, and answer acceptance outside any language model. LLMs and external services are treated as bounded tools rather than cognitive authorities.
+Clair is being developed as a cognitive architecture rather than an LLM wrapper. Its public research direction emphasizes separation of responsibilities, explicit uncertainty, governed memory, evidence discipline, and local-first operation.
 
 ## Current Status
 
-**Project milestone: Clair V4**
+**Current milestone: Clair V4**
 
-As of October 2026, the V4 package has reached a verified deployment milestone:
+As of October 2026, Clair V4 has reached a verified deployment milestone.
 
-- Cleaned and packaged local server/runtime
-- Fresh installation validated on a second physical Windows 11 machine
-- Runtime identity verification passed after transfer
-- Independent local user creation and authentication passed
-- Document upload and governed document reasoning passed on the second machine
-- TXT, DOCX, PDF, CSV, and XLSX document paths validated in development
-- Local LLM attachment demonstrated through Clair's ToolRegistry using Ollama and `llama3.2:3b`
-- LLM output remains explicitly non-authoritative candidate material
-- Live automatic LLM routing is still under controlled integration and is not yet enabled
+Publicly verified:
 
-This is a working research prototype, not a production-certified system.
+- a cleaned V4 package has been assembled
+- the Base installation profile was validated on a second physical Windows machine
+- runtime startup, authentication, and document reasoning passed after transfer
+- multiple document formats have been validated during development
+- local language-model assistance has been demonstrated as a bounded, non-authoritative resource
+- broader runtime integration and additional validation are still in progress
 
-## Design Principle
+Clair V4 is a working research prototype. It is not presented as production-certified software.
 
-Clair follows a simple architectural rule:
+## Design Principles
 
-> **Models may propose. Clair must govern.**
+Clair's public design goals are:
 
-The system separates responsibilities so that no single model call owns truth, identity, memory, routing, or final acceptance.
+- local-first operation
+- explicit uncertainty handling
+- separation of cognitive responsibilities
+- governed memory
+- verification and evidence discipline
+- bounded tool use
+- provider-independent cognition
+- honest failure when evidence is insufficient
 
-## Cognitive Architecture
+## Local-First Architecture
 
-A simplified path is:
+Clair is designed so its governing state and core decision structure can remain local.
 
-```text
-Input
-  ↓
-Perception / Intake
-  ↓
-Routing
-  ↓
-Reasoning
-  ↓
-Resourcefulness / Tool Use
-  ↓
-Calibration
-  ↓
-Verification
-  ↓
-Answer Gate
-  ↓
-Response
-  ↓
-Reflection / Governed Memory
-```
+External services and language models may extend capability, but the architecture is intended to prevent them from becoming the system's identity, memory authority, or truth authority.
 
-Supporting subsystems include working memory, long-term memory, episodic memory, planning, simulation, uncertainty handling, evidence scoring, resource recovery, and post-answer reflection.
+## Deployment Evidence
 
-## Tool and Provider Boundary
+The V4 package has been transferred to a second physical Windows machine and successfully validated from a fresh environment.
 
-Clair's tool layer uses explicit request/result contracts and registry-based execution.
-
-External providers do not receive truth authority.
-
-A current LLM integration proof follows this shape:
-
-```text
-ToolRequest
-  ↓
-ToolRegistry
-  ↓
-LLMTool
-  ↓
-Local model backend
-  ↓
-ToolResult
-  ↓
-Clair-side interpretation and acceptance
-```
-
-The isolated local-model test returned:
-
-- provider: Ollama
-- model: `llama3.2:3b`
-- `candidate_only: true`
-- `authority: none`
-
-The next integration step is a dedicated loopback inference boundary so local model traffic can be authorized without weakening Clair's existing public-network resource boundary.
-
-## Local-First
-
-Clair is designed so its governing cognition does not depend on cloud infrastructure.
-
-Network tools may extend capability, but the architecture is intended to preserve local identity, memory, reasoning control, and governance when external services are unavailable.
-
-## Reliability Philosophy
-
-Clair is designed to:
-
-- expose uncertainty rather than conceal it
-- separate evidence gathering from truth assignment
-- use bounded tool execution
-- preserve provenance and lineage where required
-- reject unsupported answers when evidence is insufficient
-- keep memory writes governed
-- prevent external tools or models from silently becoming system authority
-
-No AI system can guarantee zero hallucinations. Clair's goal is to reduce unsupported output through explicit architecture, verification, and acceptance controls.
-
-## V4 Deployment Proof
-
-The V4 release package was transferred to a second physical Windows machine and validated from a fresh environment.
-
-Verified on that machine:
-
-```text
-Release transfer              PASS
-Fresh Python environment      PASS
-Base installation             PASS
-Server startup                PASS
-Runtime identity              PASS
-Local authentication          PASS
-Normal conversation           PASS
-Document upload               PASS
-DOCX ingestion                PASS
-Governed document reasoning   PASS
-```
-
-This demonstrates reproducible deployment beyond the development machine. Broader production portability remains a separate validation target.
+This demonstrates reproducible deployment beyond the development machine. It does not claim universal operating-system compatibility or production readiness.
 
 ## Research Direction
 
-Current work is focused on:
+Current public research areas include:
 
-1. completing governed local LLM integration
-2. preserving strict network/resource boundaries
-3. Full-profile installation validation
-4. robustness and failure-path testing
-5. repeatable clean-start demonstrations
-6. capability benchmarking and gap discovery
-7. independent technical evaluation
+- governed local model assistance
+- deployment reproducibility
+- document reasoning
+- memory continuity
+- verification
+- long-lived agent stability
+- capability benchmarking
+- independent evaluation
 
 ## Research Paper
 
-Project Clair research includes work on long-lived agent continuity, governed memory, and transactional identity/state handling.
-
-Paper title:
+Project Clair research includes:
 
 **Beyond Memory: A Transactional Continuity Kernel for Long-Lived AI Agents**
 
-## Repository Scope
+## Public Repository Scope
 
-This public repository documents Clair's architecture, research direction, examples, and selected implementation material.
+This repository is intentionally limited to public documentation, research direction, milestone summaries, historical examples, and selected non-sensitive material.
 
-The active V4 development system contains additional components and validation infrastructure that are not necessarily mirrored here.
+The full active V4 implementation, private evaluation fixtures, internal governance logic, security controls, exact thresholds, and proprietary control mechanisms are not published here.
+
+See:
+
+- `V4_PUBLIC_STATUS.md`
+- `SECURITY.md`
+- `ROADMAP.md`
+- `docs/`
 
 ## License
 
-Apache License 2.0. See [LICENSE](LICENSE).
+Apache License 2.0. See `LICENSE`.
 
 ## Project
 
 Created and developed by Blake Hilton.
-
-Clair began as an independent effort to explore whether a durable synthetic cognitive system could be built around governed reasoning rather than model authority.
