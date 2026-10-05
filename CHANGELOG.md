@@ -1,67 +1,47 @@
 # Changelog
 
-All notable public milestones for Project Clair are documented here.
+Public milestones for Project Clair are documented here.
 
 ## [0.4.0] - 2026-10-05
 
-### Added
+### Public Milestones
 
-- Clair V4 deployment milestone documentation.
-- Verified fresh-machine Base installation on a second physical Windows 11 system.
-- Verified runtime identity, local authentication, document upload, and governed DOCX reasoning after transfer.
-- Added a bounded `LLMTool` integration path for local model inference.
-- Demonstrated isolated local LLM execution through Clair's `ToolRegistry` using Ollama and `llama3.2:3b`.
-- Preserved LLM outputs as non-authoritative candidate material with explicit `candidate_only: true` and `authority: none` metadata.
+- Documented the Clair V4 deployment milestone.
+- Validated a fresh Base installation on a second physical Windows machine.
+- Verified runtime startup, authentication, and document reasoning after transfer.
+- Demonstrated bounded local language-model assistance without assigning model authority over Clair's governing state.
+- Updated public documentation to reflect the current V4 research direction.
+- Added explicit public disclosure and security guidance.
 
-### Changed
+### Scope
 
-- Public project description now reflects the V4 local-first governed architecture rather than the early repository scaffold.
-- LLM integration is documented as a subordinate tool path rather than a replacement for Clair's reasoning authority.
-- Deployment claims are limited to verified second-machine Windows validation rather than generalized production portability.
+The public repository intentionally excludes the active V4 source tree, private test fixtures, internal governance logic, security-sensitive controls, exact thresholds, and proprietary implementation details.
 
-### Security / Governance
+### Pending Public Validation
 
-- Live runtime LLM registration remains intentionally pending.
-- Clair's existing resource boundary correctly blocks loopback/private targets by default.
-- The next integration step is a dedicated local-inference boundary for the Ollama endpoint without weakening normal public-network tool restrictions.
+- Full-profile installation validation
+- broader robustness testing
+- additional environment validation
+- controlled completion of local model integration
+- independent evaluation and benchmarking
 
-### Validation Status
+## [0.3.0] - Research Evolution
 
-```text
-Release transfer              PASS
-Fresh Base installation       PASS
-Server startup                PASS
-Runtime identity              PASS
-Local authentication          PASS
-Normal conversation           PASS
-Document upload               PASS
-DOCX ingestion                PASS
-Governed document reasoning   PASS
-Isolated LLM ToolRegistry     PASS
-LLM authority isolation       PASS
-Full-profile validation       PENDING
-Live LLM runtime wiring       PENDING
-```
-
-## [0.3.0] - Research / architecture evolution
-
-Clair evolved beyond the initial public scaffold into a governed cognitive architecture with structured memory, verification, resourcefulness, planning, simulation, calibration, and tool-use boundaries.
+Clair evolved beyond the initial public scaffold into a broader local-first cognitive AI research architecture focused on governed memory, verification, planning, tool use, continuity, and reliability.
 
 ## [0.1.0] - Initial Public Release
 
 ### Added
 
-- Project structure and repository setup
+- project structure and repository setup
 - Apache 2.0 license
-- Core documentation outline
-- Cognitive pipeline description
-- Three-loop control system overview
-- README with architecture summary
-- Roadmap for future development
-- Contribution guidelines
-- Code of Conduct
-- Initial folder structure (`docs/`, `examples/`, `src/clair/`, `tests/`)
+- core documentation outline
+- architecture summary
+- roadmap
+- contribution guidelines
+- code of conduct
+- initial public examples and tests
 
 ### Notes
 
-This release established the original public foundation for Clair as a structured, local cognitive AI system focused on reliability, verification, and honest uncertainty.
+This release established the public foundation for Clair as a structured local cognitive AI research project.
