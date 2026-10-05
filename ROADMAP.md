@@ -1,141 +1,142 @@
-Clair Roadmap
-A structured plan for the evolution of a disciplined, local cognitive AI system.
+# Clair Roadmap
 
-Clair is built on the principle that reliable AI requires structure, verification, and honest uncertainty.
-This roadmap outlines the planned development path for Clair’s architecture, capabilities, and ecosystem.
+A structured plan for the evolution of a local-first governed cognitive AI system.
 
-🧱 Phase 1 — Core Architecture (Current)
-Goal: Establish a stable, transparent cognitive pipeline.
+Clair is built around a separation-of-authority model: models and tools may propose or provide evidence, while Clair retains ownership of identity, memory, verification, routing, and final acceptance.
 
-✔️ Completed / In Progress
-Repository structure
+## Current Milestone: Clair V4
 
-Apache 2.0 licensing
+### Proven
 
-Core documentation
+- Local server/runtime package assembled and cleaned
+- Base installation validated on a second physical Windows 11 machine
+- Runtime identity verification passed after transfer
+- Fresh local user creation and authentication passed
+- Document upload and governed DOCX reasoning passed on the second machine
+- TXT, DOCX, PDF, CSV, and XLSX document paths validated during development
+- Isolated local LLM attachment proven through `ToolRegistry`
+- Ollama + `llama3.2:3b` verified as a subordinate inference resource
+- LLM output explicitly marked non-authoritative
 
-Cognitive pipeline definition
+### Immediate Next Steps
 
-Three‑loop control system
+1. Build a dedicated loopback-only local inference boundary for Ollama.
+2. Route Ollama HTTP through Clair's bounded `SafeFetchTransport`.
+3. Register `llm_tool` in the shared runtime registry behind explicit configuration.
+4. Add `llm_assistance -> llm_tool` to the capability map.
+5. Prove normal Clair behavior is unchanged when the LLM capability is enabled.
+6. Keep automatic LLM selection disabled until explicit runtime invocation is proven.
+7. Validate the Full installation profile.
+8. Run failure-path and malformed-input robustness tests.
+9. Freeze a repeatable clean-start demo.
+10. Begin capability benchmarking and gap discovery.
 
-Initial module layout (src/clair/)
+## Architecture Direction
 
-Example scripts
+### Local-first cognition
 
-🔜 Upcoming
-Implement Perception module
+Clair should remain operational without cloud model access. External providers may extend capability, but they must not become the system's identity, memory authority, or truth authority.
 
-Implement Affect module
+### Governed model use
 
-Implement Reasoning loop
+Target path:
 
-Implement Calibration loop
+```text
+Task / Need Detection
+        ↓
+Capability Planning
+        ↓
+Tool Selection
+        ↓
+LLMTool
+        ↓
+Local or remote provider
+        ↓
+ToolResult
+        ↓
+Clair interpretation
+        ↓
+Calibration / Verification
+        ↓
+Answer Gate
+```
 
-Implement Verification system
+### Resource-bound tool execution
 
-Implement Memory system (working + long‑term)
+Network-capable tools must remain behind explicit boundaries. Local inference will receive a narrow loopback exception rather than a general private-network permission.
 
-Implement Response module
+## Validation Roadmap
 
-🧠 Phase 2 — Internal Cognitive Mechanics
-Goal: Build out the internal logic that makes Clair reliable and self‑monitoring.
+### Deployment
 
-Planned Features
-Structured uncertainty representation
+- [x] Clean V4 package
+- [x] Second-machine ZIP integrity verification
+- [x] Fresh Base install
+- [x] Server startup
+- [x] Runtime identity verification
+- [x] Authentication bootstrap
+- [x] Foreign-machine document reasoning
+- [ ] Fresh Full-profile install
+- [ ] Additional OS / environment validation
 
-Confidence scoring
+### Documents
 
-Conflict detection
+- [x] TXT
+- [x] DOCX
+- [x] PDF
+- [x] CSV
+- [x] XLSX
+- [x] Negative no-source behavior
+- [x] Conversation isolation
+- [ ] Broader malformed/unsupported-file robustness suite
 
-Multi‑path reasoning
+### LLM integration
 
-Verification triggers
+- [x] Provider-independent LLM tool contract
+- [x] Ollama backend proof
+- [x] Isolated ToolRegistry execution
+- [x] Candidate-only authority boundary
+- [ ] Dedicated local-inference network boundary
+- [ ] Shared runtime registration
+- [ ] Explicit Clair-side invocation
+- [ ] Governed interpretation + answer-gate proof
+- [ ] Automatic selection policy
+- [ ] Additional provider adapters
 
-Memory provenance tracking
+### Evaluation
 
-Outcome‑based memory updates
+- [ ] Capability matrix freeze
+- [ ] Repeatable benchmark harness
+- [ ] GAIA re-evaluation without answer hardcoding
+- [ ] Independent architecture review
+- [ ] External evaluator package
+- [ ] Regression tracking across future capability additions
 
-“I don’t know” fallback logic
+## Research Direction
 
-🧩 Phase 3 — Tooling and Interfaces
-Goal: Make Clair usable for real‑world tasks and integrations.
+Long-term research priorities include:
 
-Planned Features
-CLI interface
+- transactional continuity for long-lived agents
+- memory truth discipline
+- recursive inquiry under bounded authority
+- simulation and experience learning
+- environmental evidence resolution
+- post-answer reflection and governed admission
+- anti-drift and long-term stability mechanisms
+- provider-independent cognition
+- situated local-first intelligence
 
-Python API
+## Long-Term Vision
 
-Task templates
+Clair aims to explore a class of AI systems that are:
 
-Tool‑use arbitration
+- local-first
+- transparent
+- verifiable
+- structured
+- provider-independent
+- memory-governed
+- resistant to unsupported answers
+- capable of using LLMs without being defined by them
 
-Plugin system for external tools
-
-Configurable reasoning depth
-
-Configurable verification strictness
-
-🧪 Phase 4 — Advanced Reasoning
-Goal: Expand Clair’s cognitive capabilities.
-
-Planned Features
-Multi‑agent reasoning
-
-Self‑debugging
-
-Reflective reasoning loop
-
-Planning and goal‑stack module
-
-Long‑term memory consolidation
-
-Pattern abstraction and generalization
-
-🛡️ Phase 5 — Safety, Reliability, and Governance
-Goal: Strengthen Clair’s position as a trustworthy cognitive system.
-
-Planned Features
-Safety constraints
-
-Verification escalation
-
-Risk‑aware reasoning
-
-Transparent decision logs
-
-Deterministic mode
-
-Enterprise governance hooks
-
-🌐 Phase 6 — Ecosystem and Community
-Goal: Build a healthy ecosystem around Clair.
-
-Planned Features
-Documentation site
-
-Tutorials and examples
-
-Community guidelines
-
-Contribution pathways
-
-Research collaborations
-
-Commercial licensing options
-
-⭐ Long‑Term Vision
-Clair aims to become the foundation for a new class of AI systems:
-
-Local
-
-Transparent
-
-Verifiable
-
-Structured
-
-Honest
-
-Reliable
-
-A cognitive engine that solves real‑world problems without hallucination — and without requiring cloud infrastructure.
+The goal is not merely a better chatbot. It is a durable cognitive architecture in which learned models are resources inside a governed system.
