@@ -1,142 +1,84 @@
 # Clair Roadmap
 
-A structured plan for the evolution of a local-first governed cognitive AI system.
+A public roadmap for the continued development and evaluation of Clair V4.
 
-Clair is built around a separation-of-authority model: models and tools may propose or provide evidence, while Clair retains ownership of identity, memory, verification, routing, and final acceptance.
+This roadmap intentionally describes goals at a high level. Internal control logic, exact security mechanisms, thresholds, private test fixtures, and proprietary implementation details are not published.
 
 ## Current Milestone: Clair V4
 
-### Proven
+### Verified
 
-- Local server/runtime package assembled and cleaned
-- Base installation validated on a second physical Windows 11 machine
-- Runtime identity verification passed after transfer
-- Fresh local user creation and authentication passed
-- Document upload and governed DOCX reasoning passed on the second machine
-- TXT, DOCX, PDF, CSV, and XLSX document paths validated during development
-- Isolated local LLM attachment proven through `ToolRegistry`
-- Ollama + `llama3.2:3b` verified as a subordinate inference resource
-- LLM output explicitly marked non-authoritative
+- cleaned V4 package assembled
+- Base installation validated on a second physical Windows machine
+- runtime startup and authentication validated after transfer
+- document reasoning validated after transfer
+- multiple document formats validated during development
+- bounded local language-model assistance demonstrated
+- public documentation updated for the V4 milestone
 
-### Immediate Next Steps
+## Immediate Priorities
 
-1. Build a dedicated loopback-only local inference boundary for Ollama.
-2. Route Ollama HTTP through Clair's bounded `SafeFetchTransport`.
-3. Register `llm_tool` in the shared runtime registry behind explicit configuration.
-4. Add `llm_assistance -> llm_tool` to the capability map.
-5. Prove normal Clair behavior is unchanged when the LLM capability is enabled.
-6. Keep automatic LLM selection disabled until explicit runtime invocation is proven.
-7. Validate the Full installation profile.
-8. Run failure-path and malformed-input robustness tests.
-9. Freeze a repeatable clean-start demo.
-10. Begin capability benchmarking and gap discovery.
+1. complete controlled local model integration
+2. preserve existing resource and security boundaries
+3. validate the Full installation profile
+4. expand robustness and malformed-input testing
+5. freeze a repeatable clean-start demonstration
+6. build a capability matrix
+7. resume benchmarking without answer hardcoding
+8. prepare for independent technical evaluation
 
-## Architecture Direction
+## Deployment Validation
 
-### Local-first cognition
+- [x] clean V4 package
+- [x] second-machine transfer
+- [x] fresh Base install
+- [x] server startup
+- [x] runtime identity check
+- [x] local authentication
+- [x] document reasoning after transfer
+- [ ] fresh Full-profile install
+- [ ] additional environment validation
 
-Clair should remain operational without cloud model access. External providers may extend capability, but they must not become the system's identity, memory authority, or truth authority.
-
-### Governed model use
-
-Target path:
-
-```text
-Task / Need Detection
-        ↓
-Capability Planning
-        ↓
-Tool Selection
-        ↓
-LLMTool
-        ↓
-Local or remote provider
-        ↓
-ToolResult
-        ↓
-Clair interpretation
-        ↓
-Calibration / Verification
-        ↓
-Answer Gate
-```
-
-### Resource-bound tool execution
-
-Network-capable tools must remain behind explicit boundaries. Local inference will receive a narrow loopback exception rather than a general private-network permission.
-
-## Validation Roadmap
-
-### Deployment
-
-- [x] Clean V4 package
-- [x] Second-machine ZIP integrity verification
-- [x] Fresh Base install
-- [x] Server startup
-- [x] Runtime identity verification
-- [x] Authentication bootstrap
-- [x] Foreign-machine document reasoning
-- [ ] Fresh Full-profile install
-- [ ] Additional OS / environment validation
-
-### Documents
+## Documents
 
 - [x] TXT
 - [x] DOCX
 - [x] PDF
 - [x] CSV
 - [x] XLSX
-- [x] Negative no-source behavior
-- [x] Conversation isolation
-- [ ] Broader malformed/unsupported-file robustness suite
+- [x] negative no-source behavior
+- [x] conversation isolation
+- [ ] broader malformed/unsupported-file robustness testing
 
-### LLM integration
+## Local Model Assistance
 
-- [x] Provider-independent LLM tool contract
-- [x] Ollama backend proof
-- [x] Isolated ToolRegistry execution
-- [x] Candidate-only authority boundary
-- [ ] Dedicated local-inference network boundary
-- [ ] Shared runtime registration
-- [ ] Explicit Clair-side invocation
-- [ ] Governed interpretation + answer-gate proof
-- [ ] Automatic selection policy
-- [ ] Additional provider adapters
+- [x] bounded local-model proof
+- [x] non-authoritative output handling demonstrated
+- [ ] controlled live-runtime integration
+- [ ] broader failure-path testing
+- [ ] additional provider evaluation
 
-### Evaluation
+## Evaluation
 
-- [ ] Capability matrix freeze
-- [ ] Repeatable benchmark harness
+- [ ] capability matrix freeze
+- [ ] repeatable benchmark harness
 - [ ] GAIA re-evaluation without answer hardcoding
-- [ ] Independent architecture review
-- [ ] External evaluator package
-- [ ] Regression tracking across future capability additions
+- [ ] independent architecture review
+- [ ] external evaluator package
+- [ ] regression tracking across future capability additions
 
-## Research Direction
-
-Long-term research priorities include:
+## Long-Term Research Areas
 
 - transactional continuity for long-lived agents
-- memory truth discipline
+- governed memory
 - recursive inquiry under bounded authority
 - simulation and experience learning
 - environmental evidence resolution
-- post-answer reflection and governed admission
-- anti-drift and long-term stability mechanisms
+- post-answer reflection
+- anti-drift and long-term stability
 - provider-independent cognition
 - situated local-first intelligence
 
 ## Long-Term Vision
 
-Clair aims to explore a class of AI systems that are:
-
-- local-first
-- transparent
-- verifiable
-- structured
-- provider-independent
-- memory-governed
-- resistant to unsupported answers
-- capable of using LLMs without being defined by them
-
-The goal is not merely a better chatbot. It is a durable cognitive architecture in which learned models are resources inside a governed system.
+Clair aims to explore AI systems that are local-first, structured, verifiable, memory-governed, provider-independent, and capable of using learned models as resources without being defined by them.
