@@ -1,154 +1,36 @@
-Clair Architecture Overview
-Clair is a modular cognitive architecture designed to solve real‑world problems through structured reasoning, explicit uncertainty handling, and verification‑driven decision‑making.
+# Architecture Overview
 
-Unlike traditional LLM agents, Clair separates cognitive functions into strict, non‑overlapping modules.
-This prevents hallucination, reduces hidden coupling, and enables transparent, inspectable reasoning.
+Clair V4 is a local-first cognitive AI research system built around separation of responsibilities and explicit governance.
 
-🧠 High‑Level Architecture
-Code
+This public document intentionally describes the architecture at a high level. Internal implementation details, control logic, security boundaries, private evaluation fixtures, and proprietary integration methods are not published here.
 
+## Public Architecture Principles
 
-Copy
-Input
-  ↓
-Perception
-  ↓
-Affect
-  ↓
-Reasoning Loop
-  ↓
-Calibration Loop
-  ↓
-Verification Loop
-  ↓
-Memory System
-  ↓
-Response
-Each module has a single responsibility and cannot perform the work of another module.
+Clair separates major cognitive responsibilities rather than placing them inside a single model call.
 
-🧩 Module Responsibilities
-Perception
-Extracts structure from input
+At a high level, the system contains functions for:
 
-Classifies task type
+- input interpretation
+- reasoning
+- uncertainty assessment
+- evidence use
+- verification
+- memory
+- planning
+- tool use
+- answer acceptance
+- reflection
 
-Identifies constraints
+The core design rule is that no external model or tool automatically becomes the authority for truth, identity, memory, or final output.
 
-No problem solving occurs here
+## Local-First Operation
 
-Affect
-Assigns urgency
+Clair is designed so that its governing state and core cognitive control can remain local. External services may provide optional capability, but they are treated as resources rather than system identity.
 
-Assigns risk weighting
+## Model Independence
 
-Determines how much verification is required
+Language models can be used as bounded resources. Their outputs are treated as candidate material subject to Clair-side processing and acceptance.
 
-Influences reasoning depth
+## Public Scope
 
-Reasoning
-Generates candidate solutions
-
-Performs multi‑step logical reasoning
-
-Evaluates alternatives
-
-Produces a provisional answer
-
-Calibration
-Detects uncertainty
-
-Flags contradictions
-
-Adjusts confidence
-
-Determines whether verification is required
-
-Verification
-Performs fact‑checking
-
-Runs alternative reasoning paths
-
-Validates claims
-
-Rejects or confirms the provisional answer
-
-Memory
-Stores facts with confidence scores
-
-Tracks provenance
-
-Updates based on outcomes
-
-Maintains both working and long‑term memory
-
-Response
-Produces the final output
-
-Includes confidence and reasoning trace if needed
-
-🔄 Three‑Loop Control System
-Clair is governed by three interacting loops:
-
-1. Reasoning Loop
-Iterative problem solving:
-
-generate → evaluate → refine
-
-2. Calibration Loop
-Metacognitive monitoring:
-
-detect uncertainty → adjust confidence → escalate if needed
-
-3. Verification Loop
-Truth governance:
-
-validate → cross‑check → confirm or reject
-
-These loops ensure Clair never self‑confirms or hallucinates.
-
-🧱 Design Principles
-Clair is built on the following principles:
-
-Honesty over fluency
-
-Verification over assumption
-
-Structure over improvisation
-
-Transparency over opacity
-
-Local execution over cloud dependency
-
-Determinism over randomness
-
-🛠️ Implementation Structure
-Code
-
-
-Copy
-src/clair/
-    perception.py
-    affect.py
-    reasoning.py
-    calibration.py
-    verification.py
-    memory.py
-    response.py
-Each file corresponds to a cognitive module.
-
-⭐ Summary
-Clair is a disciplined cognitive system designed to be:
-
-reliable
-
-transparent
-
-verifiable
-
-modular
-
-safe
-
-local
-
-This architecture is the foundation for a new class of AI systems that solve real problems without hallucination.
+The public repository documents research goals, verified milestones, and architecture principles. It does not publish the full V4 implementation or private operational details.

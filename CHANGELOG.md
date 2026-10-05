@@ -1,74 +1,47 @@
-Changelog
-All notable changes to this project will be documented in this file.
+# Changelog
 
-The format follows Semantic Versioning:
+Public milestones for Project Clair are documented here.
 
-Code
+## [0.4.0] - 2026-10-05
 
+### Public Milestones
 
-Copy
-MAJOR.MINOR.PATCH
-MAJOR — breaking changes
+- Documented the Clair V4 deployment milestone.
+- Validated a fresh Base installation on a second physical Windows machine.
+- Verified runtime startup, authentication, and document reasoning after transfer.
+- Demonstrated bounded local language-model assistance without assigning model authority over Clair's governing state.
+- Updated public documentation to reflect the current V4 research direction.
+- Added explicit public disclosure and security guidance.
 
-MINOR — new features
+### Scope
 
-PATCH — fixes and improvements
+The public repository intentionally excludes the active V4 source tree, private test fixtures, internal governance logic, security-sensitive controls, exact thresholds, and proprietary implementation details.
 
-[0.1.0] — Initial Public Release
-Added
-Project structure and repository setup
+### Pending Public Validation
 
-Apache 2.0 license
+- Full-profile installation validation
+- broader robustness testing
+- additional environment validation
+- controlled completion of local model integration
+- independent evaluation and benchmarking
 
-Core documentation outline
+## [0.3.0] - Research Evolution
 
-Cognitive pipeline description
+Clair evolved beyond the initial public scaffold into a broader local-first cognitive AI research architecture focused on governed memory, verification, planning, tool use, continuity, and reliability.
 
-Three‑loop control system overview
+## [0.1.0] - Initial Public Release
 
-README with architecture summary
+### Added
 
-Roadmap for future development
+- project structure and repository setup
+- Apache 2.0 license
+- core documentation outline
+- architecture summary
+- roadmap
+- contribution guidelines
+- code of conduct
+- initial public examples and tests
 
-Contribution guidelines
+### Notes
 
-Code of Conduct
-
-Initial folder structure (docs/, examples/, src/clair/, tests/)
-
-Notes
-This release establishes the foundation for Clair as a structured, local cognitive AI system focused on reliability, verification, and honest uncertainty.
-
-Upcoming Versions
-Future versions will include:
-
-0.2.0 — Core Modules
-Perception module
-
-Affect module
-
-Reasoning loop
-
-Calibration loop
-
-Verification system
-
-Memory system
-
-Response module
-
-0.3.0 — Examples & API
-CLI interface
-
-Python API
-
-Example tasks
-
-Tool‑use arbitration
-
-0.4.0 — Advanced Reasoning
-Multi‑path reasoning
-
-Reflective loop
-
-Long‑term memory consolidation
+This release established the public foundation for Clair as a structured local cognitive AI research project.

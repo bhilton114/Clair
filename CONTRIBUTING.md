@@ -1,113 +1,60 @@
-Contributing to Clair
-Thank you for your interest in contributing to Clair — a disciplined, local cognitive AI system built on structured reasoning, verification, and honest uncertainty.
+# Contributing to Clair
 
-Clair is not a chatbot, not a wrapper, and not a generic agent framework.
-It is a cognitive architecture with strict design principles.
-All contributions must align with these principles.
+Thank you for your interest in Project Clair.
 
-🧠 Core Philosophy
-Before contributing, please understand the following non‑negotiable foundations of Clair:
+This public repository is primarily for documentation, research discussion, public milestones, and selected non-sensitive examples. The full Clair V4 implementation is not published here.
 
-No hallucination by design
+## Contribution Scope
 
-Strict separation of cognitive modules
+Appropriate public contributions include:
 
-Verification before output
+- documentation corrections
+- research discussion
+- reproducibility notes for public claims
+- non-sensitive examples
+- terminology improvements
+- test ideas that do not expose private fixtures or implementation details
 
-Explicit uncertainty handling
+## Public Disclosure Boundary
 
-Traceable memory with confidence tracking
+Do not submit:
 
-Deterministic, inspectable reasoning steps
+- private source code from the active V4 system
+- credentials, tokens, keys, or deployment secrets
+- internal control rules, thresholds, or guard values
+- unpublished security mechanisms
+- private benchmark fixtures or evaluation answers
+- proprietary routing, governance, or continuity logic
+- internal file layouts or ownership seams not already documented publicly
+- personal data or user records
 
-Local execution
+If you are uncertain whether material is safe to publish, keep it out of the repository.
 
-If a contribution conflicts with these principles, it will not be accepted.
+## Project Principles
 
-🧱 How to Contribute
-1. Open an Issue First
-Before submitting a pull request, open an issue describing:
+Public discussion should remain aligned with Clair's high-level design goals:
 
-the problem
+- local-first operation
+- explicit uncertainty
+- bounded tool use
+- governed memory
+- verification and evidence discipline
+- separation of responsibilities
+- model/provider independence
 
-the proposed solution
+## Issues and Pull Requests
 
-why it aligns with Clair’s philosophy
+For documentation or public research changes, open an issue or pull request describing:
 
-This prevents wasted work and ensures clarity.
+1. the problem
+2. the proposed change
+3. why the change is safe for public disclosure
+4. what evidence supports any new technical claim
 
-2. Follow the Architecture
-Clair’s modules have strict, non‑overlapping responsibilities:
+## Security
 
-Code
+Potential security issues should not be posted publicly. See `SECURITY.md`.
 
+## Code of Conduct
 
-Copy
-Input → Perception → Affect → Reasoning → Calibration → Verification → Memory → Response
-Do not merge responsibilities or bypass stages.
-
-3. Write Clear, Modular Code
-Keep functions small and focused
-
-Avoid hidden side effects
-
-Document reasoning steps
-
-Use explicit uncertainty markers
-
-Maintain deterministic behavior
-
-4. Add Tests
-All new features must include tests in the tests/ directory.
-
-5. Document Your Changes
-If you add or modify a module, update the relevant file in docs/.
-
-🛡️ What Will Not Be Accepted
-Features that encourage hallucination
-
-End‑to‑end “black box” reasoning
-
-Chatbot‑style behavior
-
-Cloud‑dependent features
-
-Unverified claims or outputs
-
-Code that merges cognitive stages
-
-Attempts to turn Clair into a generic LLM wrapper
-
-Clair is a cognitive engine — not a conversational toy.
-
-🧪 Development Setup
-Clone the repository:
-
-Code
-
-
-Copy
-git clone https://github.com/bhilton114/Clair.git
-cd Clair
-Install dependencies (if any are added later):
-
-Code
-
-
-Copy
-pip install -r requirements.txt
-Run tests:
-
-Code
-
-
-Copy
-pytest
-🤝 Contributor Conduct
-All contributors must follow the CODE_OF_CONDUCT.md.
-
-⭐ Thank You
-Clair is an ambitious project with a clear mission:
-build a reliable, transparent, local cognitive system that solves real problems without hallucination.
-
-Your contributions help make that possible.
+All contributors must follow `CODE_OF_CONDUCT.md`.
