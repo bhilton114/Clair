@@ -1,10 +1,28 @@
 # Clair 3.9
 
-**Public repository for the Clair 3.9 development lineage and the research architecture that became the foundation of Clair V4.**
+> **Clair V4: a local-first cognitive architecture where LLMs are tools, not the mind.**
 
-Clair is a local-first cognitive AI research project focused on governed reasoning, verification, memory, planning, tool use, uncertainty handling, and long-lived system continuity.
+**Models may propose. Clair must govern.**
 
-This repository does **not** contain the current private Clair V4 implementation.
+Clair is a cognitive AI research project built around a separation-of-authority idea: language models, search systems, document readers, calculators, and other tools may contribute information or candidate output, but the surrounding cognitive system retains responsibility for memory, verification, planning, uncertainty handling, and final answer acceptance.
+
+This public repository contains the **Clair 3.9 development lineage**, which became the architectural foundation for the private Clair V4 system.
+
+### Start here
+
+- [Research Note: What Happens When the LLM Is No Longer the AI?](docs/RESEARCH_NOTE.md)
+- [V4 Public Status](V4_PUBLIC_STATUS.md)
+- [Architecture Overview](docs/architecture.md)
+- [Roadmap](ROADMAP.md)
+- [Security / Public Disclosure Policy](SECURITY.md)
+
+### Current public milestone
+
+Clair V4 has been transferred to and validated on a second physical Windows machine from a fresh environment, including startup, authentication, document ingestion, and governed document reasoning.
+
+Local language-model assistance has also been demonstrated experimentally as a bounded, non-authoritative resource.
+
+The active V4 implementation remains private.
 
 ## Repository Status
 
