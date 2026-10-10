@@ -36,3 +36,11 @@ The following are not claimed yet:
 - complete elimination of hallucination
 
 Clair V4 should currently be described as a working local-first cognitive AI research prototype with cross-machine deployment evidence and governed tool/model integration under active validation.
+
+## October 9, 2026: Local-Network and Experience Checkpoints
+
+- A tester interface was exercised from an Android mobile browser over a private local Wi-Fi network to the Windows-hosted Clair server.
+- The recorded tester session completed, with an HTTP 200 health response, verified runtime identity, and no visible UI error.
+- A targeted Experience Engine authority-boundary regression reported 20/20 passing checks against rejected, disputed, blocked, conflicting and otherwise excluded evidence paths, with expected fallbacks preserved.
+
+These checkpoints do not establish broad APK compatibility, internet-facing deployment readiness, complete experience learning, or overall system correctness. The APK workflow and expanded validation remain experimental.
