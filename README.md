@@ -18,6 +18,10 @@ This public repository contains the **Clair 3.9 development lineage**, which bec
 
 ### Current public milestone
 
+**October 9, 2026 update:** Clair V4 completed a local-network tester milestone: the server was reached from an Android mobile browser on the same Wi-Fi network, with a completed tester report, HTTP 200 health response, verified runtime identity, and no visible UI error in the recorded session. This is a bounded LAN demonstration, not a claim of universal Android compatibility, remote internet access, or a production release.
+
+The Experience Engine also completed a targeted authority-boundary regression checkpoint (20/20 passing checks) covering denial of disputed, blocked, rejected, and conflicting evidence while preserving defined fallback behavior. This is a *targeted regression result*, not an overall suite total or evidence of autonomous learning in all settings.
+
 Clair V4 has been transferred to and validated on a second physical Windows machine from a fresh environment, including startup, authentication, document ingestion, and governed document reasoning.
 
 Local language-model assistance has also been demonstrated experimentally as a bounded, non-authoritative resource.
@@ -43,6 +47,7 @@ As of October 2026:
 - runtime startup, local authentication, document ingestion, and governed document reasoning passed after transfer
 - multiple document formats have been validated during development
 - local language-model assistance has been demonstrated as a bounded, non-authoritative resource
+- a closed-network mobile tester session and Experience Engine authority-boundary regression have been recorded
 - controlled live-runtime model integration, broader robustness testing, and Full-profile validation remain active work
 
 Clair V4 is currently a working research prototype, not a production-certified release.
@@ -117,6 +122,12 @@ Governed document reasoning PASS
 ```
 
 This demonstrates reproducible deployment beyond the development PC. It does not claim universal portability or production readiness.
+
+## Local-First Access and Experience Work
+
+A local-network tester workflow has been demonstrated: the Clair server runs on a Windows host and a separate device on the same private Wi-Fi network accesses its tester interface. No public internet connection is required for that LAN path. The recorded Android browser report establishes a successful session, not full deployment or device-compatibility coverage. The APK packaging/testing workflow remains experimental.
+
+Experience handling is being developed with explicit separation between observed or candidate material and information admitted into authoritative state. Recent bounded tests exercised rejection and conflict handling. Wider persistence, replay, learning quality, and adversarial robustness still require continued validation.
 
 ## Current Research Priorities
 
