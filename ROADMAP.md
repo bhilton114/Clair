@@ -82,3 +82,12 @@ This roadmap intentionally describes goals at a high level. Internal control log
 ## Long-Term Vision
 
 Clair aims to explore AI systems that are local-first, structured, verifiable, memory-governed, provider-independent, and capable of using learned models as resources without being defined by them.
+
+## October 9, 2026 Progress
+
+- [x] Demonstrate local Wi-Fi access from an Android mobile browser to a Windows-hosted Clair tester interface
+- [x] Record successful tester health and runtime identity checks
+- [x] Pass a targeted 20/20 Experience Engine authority-boundary regression
+- [ ] Validate broader Android APK/device behavior and failure cases
+- [ ] Complete broader Experience Engine persistence, replay, and robustness verification
+- [ ] Expand end-to-end benchmarks and external evaluation
