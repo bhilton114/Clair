@@ -58,3 +58,14 @@ Not published here:
 
 Blake Hilton  
 Project Clair
+
+## Manuscripts undergoing review
+
+- **Governed Experience Reuse in a Local-First Cognitive Agent** (Blake Hilton, 2026), version 0.1, technical preprint draft. [Read the review copy](https://github.com/bhilton114/Clair_v.3/blob/docs/clair-v4-public-overview-20261012/research/2026-governed-experience-reuse.md). It is on a review branch; it is **not** yet a stable versioned release, peer-reviewed work, or DOI-registered publication.
+
+## Research navigation and publication integrity
+
+- [Development stages](../docs/PROJECT_STAGES.md) explains the historical repositories and active V4 status.
+- [Public documentation map](../docs/SITE_MAP.md) provides a single starting point for technical reviewers.
+- **Authorship and publication verification:** An earlier project README lists *Beyond Memory: A Transactional Continuity Kernel for Long-Lived AI Agents*. Verify the original publication's authorship and identifier independently before adding it to an ORCID record.
+- For ORCID, prefer a reviewed, released manuscript with a stable public URL and, where available, an archive DOI.
