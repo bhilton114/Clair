@@ -1,5 +1,9 @@
 # Project Clair Research
 
+## October 2026 full-text research manuscripts
+
+The current public working manuscript collection has **six versioned papers** with individual citation URLs and BibTeX entries. **[Browse the collection](papers/2026-10-13/README.md)**. These are not peer-reviewed papers or arXiv publications; the index explains the evidence status and pending evaluations.
+
 This directory collects public, non-sensitive research material from Project Clair.
 
 The documents here describe the ideas, architecture, and validation evidence behind the project without publishing the active Clair V4 source tree, private tests, exact thresholds, security-sensitive controls, or proprietary implementation seams.
